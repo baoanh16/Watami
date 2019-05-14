@@ -97,4 +97,51 @@ $(document).ready(function () {
 			clickable: true,
 		}
 	})
+
+
+	if ($('.watami-nav').length) {
+		var watamiNavOffset = $('.watami-nav').offset().top;
+		watamiNavSticky(watamiNavOffset);
+	}
+
+	watamiScrollNav();
+
+
+	window.onscroll = function () {
+		watamiNavSticky(watamiNavOffset);
+	}
 });
+
+
+function watamiNavSticky(navOffsetTop) {
+	var scrollTop = null,
+		$watamiNav = $('.watami-nav');
+	scrollTop = $(window).scrollTop() + $('header').outerHeight();
+	if (scrollTop >= navOffsetTop) {
+		$watamiNav.addClass('active');
+	} else {
+		$watamiNav.removeClass('active');
+	}
+}
+
+function watamiScrollNav() {
+	var sectionId = 'body';
+	if ($(window).outerWidth() >= 1025) {
+		$('body').on('click', '.scrollNav > a', function () {
+			sectionId = $(this).attr('data-href');
+			scrollToSection(sectionId);
+		});
+	} else {
+		$('body').on('change', '.selectScrollNav', function () {
+			sectionId = $(this).val();
+			scrollToSection(sectionId);
+		});
+	}
+}
+
+function scrollToSection(sectionId) {
+	var offsetTop = $(sectionId).offset().top - $('header').outerHeight() - $('.watami-nav').outerHeight();
+	$('html, body').animate({
+		scrollTop: offsetTop
+	}, 500);
+}

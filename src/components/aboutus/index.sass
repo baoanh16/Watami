@@ -1,0 +1,176 @@
+.watami-nav
+    width: 100%
+    height: 50px
+
+    @media (max-width: 1024px)
+        background-color: #ffffff
+        nav
+            display: none
+        select
+            width: 100%
+            height: 35px
+            padding: 0 15px
+            margin-top: 7.5px
+            background-color: #ffffff
+            font-size: 15px
+            color: #424447
+            border: 1px solid #424447
+            box-shadow: none
+            outline: none
+
+    @media (min-width: 1025px)
+        select
+            display: none
+        nav
+            background-color: #424447
+            width: 100%
+            height: 50px
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-wrap: wrap
+
+        a
+            display: block
+            margin-left: 50px
+            font-size: 14px
+            font-weight: 400
+            color: #ffffff !important
+            cursor: pointer
+            text-transform: capitalize
+            position: relative
+            transition: .25s cubic-bezier(.4,0,.2,1)
+            &:first-child
+                margin-left: 0
+
+            &:before
+                position: absolute
+                content: ''
+                width: 100%
+                height: 1px
+                background-color: #fff
+                bottom: -2px
+                left: 0
+                opacity: 0
+                transition: .25s cubic-bezier(.4,0,.2,1)
+            &.active
+                font-weight: 700
+                &:before
+                    opacity: 1
+            &:hover
+                &:before
+                    opacity: 1
+
+    &.active
+        position: fixed
+        top: 60px
+        left: 0
+        z-index: 888
+        @media (min-width: 1200px)
+            top: 90px
+
+.aboutus-1
+    h2.main-title
+        margin-bottom: 30px
+    
+    p
+        font-size: 16px
+        font-weight: 400
+        line-height: 24px
+        color: #666666
+
+    .img
+        display: flex
+        align-items: center
+        justify-content: center
+        @media (max-width: 1025px)
+            margin-top: 30px
+
+    .images
+        margin-right: -2px !important
+        margin-left: -2px !important
+        margin-top: 40px
+        @media (max-width: 576px)
+            margin-top: 20px
+            margin-bottom: 20px
+        .col-sm-6, .col-lg-3
+            padding-left: 2px !important
+            padding-right: 2px !important
+
+        a
+            @media (max-width: 576px)
+                display: flex
+                align-items: center
+                justify-content: center
+
+        .col-sm-6.col-lg-3
+            margin-top: 2px
+            &:first-child
+                margin-top: 0
+            @media (min-width: 576px)
+                &:nth-child(2)
+                    margin-top: 0
+            @media (min-width: 1025px)
+                margin-top: 0
+
+.aboutus-2
+    padding-left: 15px
+    padding-right: 15px
+    .desc
+        font-size: 16px
+        font-weight: 400
+        line-height: 24px
+        color: #666666
+        text-align: center
+
+    p
+        font-size: 16px
+        font-weight: 400
+        line-height: 24px
+        color: #666666
+
+    @media (min-width: 1025px)
+        .desc
+            width: 90%
+            margin-left: auto
+            margin-right: auto
+    @media (max-width: 576px)
+        width: calc(100% + 30px)
+        margin-left: -15px
+
+    .block
+        margin-top: 30px
+        display: flex
+        align-items: center
+        justify-content: center
+        box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.1)
+        background-color: #ffffff
+        padding: 30px
+        @media (min-width: 1025px)
+            padding: 70px 50px
+
+    .item
+        margin-top: 40px
+        a
+            display: block
+            margin-bottom: 15px
+        @media (min-width: 1025px)
+            margin-top: 60px
+            a
+                margin-bottom: 20px
+
+.aboutus-3
+    padding-left: 15px
+    padding-right: 15px
+    .desc
+        font-size: 16px
+        font-weight: 400
+        line-height: 24px
+        color: #666666
+        text-align: center
+
+    @media (min-width: 1025px)
+        .desc
+            width: 90%
+            margin-left: auto
+            margin-right: auto

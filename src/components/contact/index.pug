@@ -1,0 +1,54 @@
+.contact.pd-75
+    .container
+        h1.main-title Contact
+
+        .row.contact-form
+            .col-lg-4.img
+                img(data-src='./img/contact/1.jpg', alt='').lazyload.blur-up
+            .col-lg-8.watami-form-v1
+                .wrap-form
+                    div
+                        h2 Please fill in the form to contact us. We will reply you as soon as we can. Thank you.
+                        .form-group.qtext.require
+                            label Full Name
+                            input(type='text', placeholder='Họ và tên...')
+                            span.fa.fa-exclamation-triangle(style='display:none;') Vui lòng nhập Họ và tên....
+                        .form-group.qtext.require
+                            label Email
+                            input(type='text', placeholder='Email...')
+                            span.fa.fa-exclamation-triangle(style='display:none;') Vui lòng nhập Email....
+                        .form-group.qtext.require
+                            label Phone number
+                            input(type='text', placeholder='Tiêu đề...')
+                            span.fa.fa-exclamation-triangle(style='display:none;') Vui lòng nhập Tiêu đề....
+                        .form-group.qtext.require
+                            label Subject
+                            input(type='text', placeholder='Tiêu đề...')
+                            span.fa.fa-exclamation-triangle(style='display:none;') Vui lòng nhập Tiêu đề....
+                        .form-group.qparagraph.require
+                            label Message
+                            textarea(rows='7', cols='20', placeholder='Nội dung...')
+                            span.fa.fa-exclamation-triangle(style='display:none;') Vui lòng nhập Nội dung....
+                    #ctl00_mainContent_ctl05_divCaptcha.form-group.frm-captcha.google-captcha
+                    .form-group.frm-btnwrap
+                        label.label  
+                        .frm-btn
+                            input#ctl00_mainContent_ctl05_btnSubmit.btn.btn-default.frm-btn-submit(type='submit', value='Book a table')
+                            input#ctl00_mainContent_ctl05_btnReset.btn.btn-default.frm-btn-reset(type='reset', value='Xóa')
+
+        .row
+            .col-lg-4
+                .contact-info(bg-img="./img/contact/bg_1.jpg" bg-img-mobile="./img/contact/bg_1.jpg")   
+                    .logo
+                        img(data-src='./img/contact/logo.png', alt='').lazyload.blur-up
+                    .content
+                        a
+                            em.mdi.mdi-home
+                            span Serenity Sky Villas, 259 Dien Bien Phu, Ward 7, Distric 3, HCMC.
+                        a
+                            em.mdi.mdi-email
+                            span info@watami.vn
+            .col-lg-8.map
+                iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.389329971645!2d106.68686951462253!3d10.781463892318154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3034ee7525%3A0x2c81e1d70f8d63aa!2sSerenity+Sky+Villas+Sonkimland!5e0!3m2!1sen!2s!4v1557858135473!5m2!1sen!2s', width='600', height='450', frameborder='0', style='border:0', allowfullscreen='')
+
+

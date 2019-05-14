@@ -1,0 +1,11 @@
+extends _layout.pug
+
+block var
+	- var title = 'Reservation'
+	- var bodyClass = 'reservation-page'
+
+block main
+	// Includes components here
+	include ../components/_global/breadcrumb
+	include ../components/banner/index
+	include ../components/reservation/index

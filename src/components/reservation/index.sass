@@ -1,0 +1,125 @@
+.reservation
+    .reservation-info
+        padding: 15px
+        background-color: #f7f7f7
+        @media (max-width: 1024px)
+            margin-bottom: 30px
+        @media (min-width: 1025px)
+            padding: 50px 40px
+
+        h2
+            font-size: 20px
+            font-weight: 700
+            color: #333
+            margin-bottom: 10px
+            text-transform: uppercase
+        a
+            display: block
+            text-decoration: none
+            font-size: 24px
+            font-weight: 700
+            color: #f01a22
+            line-height: 30px
+
+        p
+            font-size: 14px
+            font-weight: 400
+            color: #333333
+            line-height: 24px
+
+        .block
+            &:first-child
+                margin-bottom: 30px
+
+
+.watami-form-v1
+    h2
+        font-size: 16px
+        font-weight: 700
+        color: #333333
+        margin-bottom: 20px
+    .form-group.qtext, .form-group.qdropdown, .form-group.qdate, .form-group.qparagraph, .form-group.choosetime
+        font-size: 0
+        margin-bottom: 30px
+        label
+            display: block
+            font-size: 14px
+            font-weight: 400
+            color: #333333
+            margin-bottom: 8px
+        @media (min-width: 1025px)
+            width: calc(50% - 17px)
+            display: inline-block
+            margin-right: 30px
+            &:nth-child(2n + 1)
+                margin-right: 0
+        > span
+            font-family: "Merriweather", sans-serif
+            font-size: 14px
+            margin-top: 4px
+            font-style: italic
+            color: #ff0000
+            display: block
+
+    .form-group.qparagraph
+        @media (min-width: 1025px)
+            width: 100%
+            margin-right: 0
+
+    .form-group.choosetime
+        @media (min-width: 1025px)
+            .form-group.qdropdown
+                margin-bottom: 0
+                &:last-child
+                    margin-right: 0
+
+    input[type="text"], select, textarea
+        border: 1px solid rgba(0,0,0,0)
+        outline: none
+        box-shadow: 0 0 0 0 rgba(0,0,0,0)
+        width: 100%
+        height: 45px
+        background-color: #f7f7f7
+        border-radius: 5px
+        padding: 0 20px
+        font-size: 14px
+        color: #333333
+        font-weight: 700
+        transition: .25s cubic-bezier(.4,0,.2,1)
+        &:focus
+            background-color: #ffffff
+            border-color: #e1e1e1
+            box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1)
+            caret-color: #f01a22
+
+    textarea
+        padding-top: 15px
+        height: 80px
+
+    .form-group.frm-btnwrap
+        > label
+            display: none
+        input[type="reset"]
+            display: none
+
+        input[type="submit"]
+            display: flex
+            align-items: center 
+            justify-content: center
+            margin-left: auto
+            color: #f01a22
+            font-weight: 300
+            font-size: 14px
+            text-transform: uppercase
+            border: 2px solid #fe0000
+            width: 190px
+            height: 40px
+            border-radius: 20px
+            box-shadow: none
+            outline: none
+            background-color: #fff
+            cursor: pointer
+            transition: .25s cubic-bezier(.4,0,.2,1)
+            &:hover
+                background-color: #fe0000
+                color: #fff
