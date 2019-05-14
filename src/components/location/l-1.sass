@@ -1,0 +1,51 @@
+.location-1
+	.textbox
+		box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.1)
+		padding: 50px
+		height: 100%
+		h3 
+			font-size: 24px
+			font-weight: 400
+			color: black
+			margin-bottom: 16px
+		p
+			font-size: 16px
+			color: #666666
+			.mdi
+				font-size: 18px
+				margin-right: 12px
+				color: #999999
+		a
+			color: #f01a22
+		@media (max-width: 1024px)
+			padding: 20px
+			h3 
+				font-size: 21px
+			p
+				font-size: 14.5px
+				span
+					font-size: 13px
+				.mdi
+					font-size: 16px
+					margin-right: 8px
+		@media (max-width: 575.9px)
+			h3 
+				font-size: 18px
+			p
+				font-size: 13px
+				span
+					font-size: 12px
+				.mdi
+					font-size: 14px
+	.imgbox
+		text-align: center
+		height: 100%
+		img
+			opacity: 0
+			@media (max-width: 1199.9px)
+				opacity: 1
+	@media (max-width: 1199.9px)
+		.col-xl-6:nth-child(1)
+			order: 2
+		.col-xl-6:nth-child(2)
+			order: 1
