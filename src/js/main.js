@@ -145,3 +145,12 @@ function scrollToSection(sectionId) {
 		scrollTop: offsetTop
 	}, 500);
 }
+	$('.promotion-item').each(function () {
+		$(this).find('.imgbox').height($(this).find('.imgbox').width() / (690 / 390))
+	})
+	$(window).on('resize',function () {
+		$('.promotion-item').each(function () {
+			$(this).find('.imgbox').height($(this).find('.imgbox').width() / (690 / 390))
+		})
+	})
+});

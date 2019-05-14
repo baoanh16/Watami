@@ -1,0 +1,77 @@
+.promotion-item
+	box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.1)
+	.imgbox
+		overflow: hidden
+		img
+			width: 100%
+			opacity: 0
+	.info
+		padding: 25px
+		h3
+			margin-bottom: 10px
+			font-size: 18px
+			color: #333333
+			max-height: 54px
+			overflow: hidden
+			display: -webkit-box
+			-webkit-line-clamp: 2
+			-webkit-box-orient: vertical
+		p
+			font-size: 14px
+			max-height: 42px
+			font-weight: 400
+			color: #666666
+			overflow: hidden
+			display: -webkit-box
+			-webkit-line-clamp: 2
+			-webkit-box-orient: vertical
+		@media (max-width: 1024px)
+			h3
+				font-size: 17px
+				max-height: 51px
+				margin-bottom: 8px
+			p
+				font-size: 13px
+				max-height: 39px
+		@media (max-width: 767.98px)
+			h3
+				font-size: 16px
+				max-height: 48px
+				margin-bottom: 6px
+			p
+				font-size: 12px
+				max-height: 36px
+	@media (min-width: 992px)
+		&:hover
+			.info
+				h3
+					color: #f01a22
+
+.promotion-1
+	.promotion-item
+		height: 100%
+	.promotion-item-col
+		padding: 0 15px
+		max-width: 33.3333%
+		flex: 0 0 33.3333%
+		margin-bottom: 30px
+	.promotion-item-col:nth-child(1),
+	.promotion-item-col:nth-child(2)
+		max-width: 50%
+		flex: 0 0 50%
+	@media (max-width: 1024px)
+		.promotion-item-col
+			max-width: 50%
+			flex: 0 0 50%
+		.promotion-item-col:nth-child(1),
+		.promotion-item-col:nth-child(2)
+			max-width: 50%
+			flex: 0 0 50%
+	@media (max-width: 575.9px)
+		.promotion-item-col
+			max-width: 100%
+			flex: 0 0 100%
+		.promotion-item-col:nth-child(1),
+		.promotion-item-col:nth-child(2)
+			max-width: 100%
+			flex: 0 0 100%
