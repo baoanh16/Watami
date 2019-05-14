@@ -1,0 +1,13 @@
+extends _layout.pug
+
+block var
+	- var title = 'Our Restaurant'
+	- var bodyClass = 'restaurant-page'
+
+block main
+	// Includes components here
+	include ../components/_global/breadcrumb
+	include ../components/banner/index
+	include ../components/restaurant/r-1
+	include ../components/restaurant/r-2
+	include ../components/restaurant/r-3

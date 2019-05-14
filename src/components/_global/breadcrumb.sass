@@ -1,0 +1,32 @@
+.breadcrumb-wrapper
+	background: #f7f7f7
+.breadcrumb
+	width: 100%
+	padding-right: 15px
+	padding-left: 15px
+	margin-right: auto
+	margin-left: auto
+	list-style-type: none
+	display: flex
+	font-size: 14px
+	align-items: center
+	height: 40px
+	@media (min-width: 768px)
+		max-width: 720px
+	@media (min-width: 1025px)
+		max-width: 990px
+	@media (min-width: 1200px)
+		max-width: 1170px
+	@media (min-width: 1360px)
+		max-width: 1330px
+	@media (min-width: 1440px)
+		max-width: 1440px
+	.itemcrumb
+		color: #999999
+		&:after
+			content: '/'
+			margin: 0 3px
+		&.active
+			color: #333333
+			&:after
+				content: none

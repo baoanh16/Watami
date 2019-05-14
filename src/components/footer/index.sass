@@ -1,0 +1,144 @@
+footer
+	.bottom-footer
+		padding: 20px 0
+		background-image: url('../img/footer_bg_2.png')
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+	.logo-list
+		margin-bottom: 30px
+		nav
+			display: flex
+			align-items: center
+			height: 100%
+			flex-wrap: wrap
+			justify-content: center
+		@media (max-width: 1024px)
+			margin-bottom: 20px
+			a
+				margin-bottom: 15px
+				margin-left: 10px
+				margin-right: 10px
+		@media (min-width: 1025px)
+			flex: 0 0 auto
+			width: auto
+			max-width: 100%
+			margin-bottom: 0
+			a
+				+ a
+					margin-left: 25px
+	.copyright
+		@media (max-width: 1024px)
+			flex: 0 0 100%
+			max-width: 100%
+		@media (min-width: 1025px)
+			max-width: 100%
+			flex-grow: 1
+			flex-basis: 0
+	.copyright-text
+		font-size: 12px
+		color: white
+		text-align: right
+		@media (max-width: 1024px)
+			text-align: center
+	.social
+		margin-bottom: 14px
+		nav
+			display: flex
+			justify-content: flex-end
+			@media (max-width: 1024px)
+				justify-content: center
+			a
+				flex: 0 0 40px
+				max-width: 40px
+				height: 40px
+				display: inline-flex
+				justify-content: center
+				align-items: center
+				background: #464646
+				border-radius: 50%
+				font-size: 18px
+				color: white
+				+ a
+					margin-left: 18px
+	.top-footer
+		padding: 70px 0
+		background-image: url('../img/footer_bg.jpg')
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+		h4
+			font-size: 18px
+			font-weight: 700
+			color: black
+			text-transform: uppercase
+			margin-bottom: 20px
+		@media (max-width: 1359.98px)
+			h3
+				font-size: 16px
+		@media (max-width: 1024px)
+			padding: 30px 0
+			h3
+				margin-bottom: 10px
+		.address
+			margin-bottom: 20px
+		.address, .receive-email
+			color: #999999
+			font-size: 14px
+			p
+				display: flex
+				align-items: flex-start
+				.mdi
+					margin-right: 10px
+			.ModuleHtml
+				margin-bottom: 16px
+			.subscribe
+				input
+					border: 0
+					border-bottom: 1px solid #e1e1e1
+					background: none
+					width: 100%
+					margin-bottom: 25px
+				.subscribebutton
+					width: 155px
+					border: 0
+					border-bottom: 1px solid black
+					text-transform: uppercase
+					font-size: 16px
+					color: #333333
+					text-transform: uppercase
+					background: none
+					display: flex
+					justify-content: space-between
+					align-items: center
+					padding: 15px 0
+					line-height: 1
+					@media (max-width: 1199.9px)
+						margin: 0 auto
+					&:hover
+						border-bottom-color: #f01a22
+						color: #f01a22
+						&:after
+							color: #f01a22
+					&:after
+						content: '\f054'
+						font-family: 'Material Design Icons'
+						font-size: 18px
+						color: #999999
+		.footer-nav
+			@media (max-width: 1024px)
+				margin-bottom: 20px
+			nav
+				display: flex
+				flex-wrap: wrap
+				a
+					flex: 0 0 100%
+					max-width: 100%
+					font-size: 14px
+					color: #666666
+					display: inline-flex
+					padding: 5px 0
+					&:hover
+						color: #f01a22
+					@media (max-width: 1359.98px)
+						font-size: 13px

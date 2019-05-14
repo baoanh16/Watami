@@ -1,0 +1,84 @@
+body
+	font-family: 'Merriweather', sans-serif
+	&.overflow-hidden
+		overflow: hidden
+
+input,textarea,button,select
+	&:focus
+		outline: none
+
+main
+	padding-top: 90px
+	@media (max-width: 1199.9px)
+		padding-top: 60px
+
+img
+	max-width: 100%
+
+.pt-75
+	padding-top: 75px
+	@media (max-width: 1024px)
+		padding-top: 40px
+.pb-75
+	padding-bottom: 75px
+	@media (max-width: 1024px)
+		padding-bottom: 40px
+.pd-75
+	padding: 75px 0
+	@media (max-width: 1024px)
+		padding: 40px 0
+
+.data-bg
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+
+.btn-viewmore
+	height: 40px
+	border-radius: 20px
+	width: 190px
+	display: flex
+	justify-content: center
+	align-items: center
+	text-transform: uppercase
+	font-size: 14px
+	font-weight: 300
+	color: white
+	background: #fe0000
+	@media (max-width: 767.9px)
+		font-size: 13px
+	.fas
+		margin-left: 12px
+	&:hover
+		color: white
+
+.main-title
+	font-size: 36px
+	font-weight: 400
+	text-transform: uppercase
+	text-align: center
+	margin-bottom: 20px
+	@media (max-width: 1359.98px)
+		font-size: 33px
+	@media (max-width: 1200px)
+		font-size: 30px
+	@media (max-width: 1024.98px)
+		font-size: 27px
+		margin-bottom: 10px
+	@media (max-width: 767.98px)
+		font-size: 24px
+	@media (max-width: 575.98px)
+		font-size: 21px
+	&.black
+		color: black
+	&.white
+		color: white
+
+.swiper-pagination
+	position: static
+	span
+		border: 1px solid white
+		opacity: 1
+		&.swiper-pagination-bullet-active
+			border: 1px solid #ff0000
+			background: #ff0000

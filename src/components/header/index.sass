@@ -1,0 +1,200 @@
+header
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 90px
+	padding: 15px 0
+	z-index: 10
+	background: white
+	.logo-wrapper
+		height: 60px
+		a
+			display: inline-block
+			+ a
+				margin-left: 20px
+	.header-nav-wrapper
+		max-width: 100%
+		flex-grow: 1
+		flex-basis: 0
+	.top
+		display: flex
+		height: 20px
+		margin-bottom: 24px
+		position: relative
+	.site-select
+		margin-left: auto
+		display: flex
+		align-items: center
+		margin-right: 15px
+		select
+			height: 20px
+			border: 0
+			border-bottom: 1px solid #ebebeb
+			font-size: 14px
+			color: #999999
+	.language-wrapper
+		nav
+			display: flex
+			height: 20px
+			align-items: center
+			a
+				height: 100%
+				margin-right: 10px
+				display: flex
+				align-items: center
+	.search
+		.search-toggle
+			width: 30px
+			height: 20px
+			display: flex
+			align-items: center
+			justify-content: center
+			border: 1px solid #ebebeb
+			color: #999999
+			cursor: pointer
+		.searchbox
+			.searchinput
+				width: 100%
+				height: 30px
+				border: 0
+				padding: 0 40px 0 10px
+				font-size: 14px
+				box-shadow: 0 0 2px rgba(black,.3)
+			.searchbutton
+				position: absolute
+				top: 0
+				width: 30px
+				height: 30px
+				right: 0
+				font-size: 24px
+				background: none
+				border: 0
+				display: flex
+				justify-content: center
+				align-items: center
+				line-height: 1
+				color: #f01a22
+			@media (min-width: 1200px)
+				opacity: 0
+				visibility: hidden
+				transform: translateY(10px)
+				position: absolute
+				top: 100%
+				right: 0
+				margin-top: 55px
+				transition: all .3s cubic-bezier(.2,.5,.5,.8)
+				&.open
+					opacity: 1
+					visibility: visible
+					transform: translateY(0)
+	.main-nav
+		nav
+			display: flex
+			justify-content: flex-end
+		a
+			line-height: 1
+			font-size: 15px
+			color: #333333
+			text-transform: uppercase
+			transition: all .3s cubic-bezier(.2,.5,.5,.8)
+			+ a
+				margin-left: 24px
+			@media (max-width: 1439.98px)
+				+ a
+					margin-left: 18px
+			@media (max-width: 1359.98px)
+				font-size: 14px
+				+ a
+					margin-left: 12px
+			&.active
+				color: #f01a22
+				font-weight: 700
+			&:hover
+				color: #f01a22
+	.menu-toggle
+		display: none
+	@media (max-width: 1199.9px)
+		height: 60px
+		padding: 8px 0
+		box-shadow: 0 0 8px rgba(#f01a22,.5)
+		.top
+			flex-wrap: wrap
+			margin-bottom: 0
+			height: auto
+		.site-select,.search
+			order: 2
+		.language-wrapper
+			margin-left: auto
+			display: flex
+			align-items: center
+		.search
+			width: 100%
+			.search-toggle
+				display: none
+			.searchbox
+				display: block
+				position: relative
+		.site-select
+			flex: 0 0 100%
+			max-width: 100%
+			margin-right: 0
+			margin-bottom: 10px
+			select
+				width: 100%
+				height: 30px
+				border-bottom-color: #f01a22
+		.logo-wrapper
+			height: 44px
+			a
+				height: 100%
+			img
+				height: 100%
+		.menu-toggle
+			display: flex
+			align-items: center
+			margin-left: 10px
+			font-size: 30px
+			color: #f01a22
+		.header-nav-wrapper
+			position: fixed
+			top: 60px
+			right: 0
+			bottom: 0
+			width: 100%
+			max-width: 240px
+			padding: 20px 15px
+			background: white
+			transform: translateX(100%)
+			transition: all .3s cubic-bezier(.2,.5,.5,.8)
+			overflow-y: auto
+			&.open
+				box-shadow: 0 9px 8px rgba(#f01a22,.5)
+				transform: translateX(0)
+		.main-nav
+			nav
+				flex-wrap: wrap
+				a
+					flex: 0 0 100%
+					max-width: 100%
+					display: inline-block
+					padding: 10px
+					font-size: 16px
+					line-height: 1.5
+					+ a
+						margin-left: 0
+					&.active
+						background: #f01a22
+						color: white
+.overlay
+	@media (min-width: 1025px)
+		display: none!important
+	@media (max-width: 1024px)
+		display: none
+		position: fixed
+		top: 60px
+		left: 0
+		right: 0
+		bottom: 0
+		background: rgba(black,.9)
+		z-index: 9

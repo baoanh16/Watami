@@ -1,0 +1,23 @@
+.home-3
+	.content
+		@media (max-width: 767.9px)
+			margin: 0 -15px
+	.swiper-slide
+		.title
+			padding-top: 20px
+			h3
+				text-align: center
+				text-transform: uppercase
+				color: white
+				font-size: 24px
+				opacity: 0
+				transform: translateY(10px)
+				transition: all .4s cubic-bezier(.2,.5,.5,.8)
+				@media (max-width: 1024px)
+					font-size: 20px
+				@media (max-width: 575.9px)
+					font-size: 16px
+		&.swiper-slide-active
+			h3
+				opacity: 1
+				transform: translateY(0)
