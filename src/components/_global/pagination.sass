@@ -1,0 +1,25 @@
+.modulepager
+	.pagination
+		list-style-type: none
+		display: flex
+		justify-content: center
+	li
+		margin: 0 5px
+		a,span
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 40px
+			height: 40px
+			border: 1px solid #999999
+			border-radius: 50%
+			font-size: 18px
+			color: #999999
+		&:hover
+			a,span
+				background: rgba(0,0,0,.2)
+		&.active
+			a,span
+				background: #999999
+				color: white
+				font-weight: 700

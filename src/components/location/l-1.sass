@@ -44,8 +44,42 @@
 			opacity: 0
 			@media (max-width: 1199.9px)
 				opacity: 1
+	.full-content
+		padding-bottom: 20px
+		margin-bottom: 15px
+		border-bottom: 1px solid #eaeaea
+	.attributes
+		display: flex
+		.mdi-timer
+			flex: 0 0 18px
+			max-width: 18px
+			color: #999999
+			margin-right: 12px
+		table
+			font-size: 14px
+			font-weight: 400
+			color: #999999
+			@media (max-width: 1024px)
+				font-size: 13px
+			@media (max-width: 575.98px)
+				font-size: 12px
+			p
+				font-size: inherit
+				font-weight: inherit
+				color: inherit
+			td
+				vertical-align: top
+				&:nth-child(1)
+					padding-right: 14px
 	@media (max-width: 1199.9px)
 		.col-xl-6:nth-child(1)
 			order: 2
 		.col-xl-6:nth-child(2)
 			order: 1
+#map
+	width: 100%
+	height: 100%
+	overflow: visible
+	iframe
+		width: inherit
+		height: inherit
