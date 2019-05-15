@@ -146,4 +146,16 @@
 	<data name="ViewMoreText" xml:space="preserve">
 		<value>View more</value>
 	</data>
+	<data name="JobInfoText" xml:space="preserve">
+		<value>Employment information</value>
+	</data>
+	<data name="ApplyJobText" xml:space="preserve">
+		<value>Apply now</value>
+	</data>
+	<data name="DownloadJobApplicationFormText" xml:space="preserve">
+		<value>Download application form</value>
+	</data>
+	<data name="OtherJobsText" xml:space="preserve">
+		<value>Other positions</value>
+	</data>
 </root>

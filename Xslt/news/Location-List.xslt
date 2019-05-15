@@ -22,7 +22,7 @@
 						
 						<p>
 							<span class="mdi mdi-map-marker"></span>
-							<a data-fancybox="" data-src="#map">
+							<a data-fancybox="" data-src="#map" href="#">
 								View map
 							</a>
 						</p>

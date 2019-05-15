@@ -123,7 +123,6 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
 				flex-direction: column
 			}
 		}
-
 	</style>
 	<!-- <script>
 		; (function () {
@@ -215,6 +214,7 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
 					</div>
 				</div>
 			</header>
+			<div class="overlay"></div>
 			<!-- ////////////// End Header ////////////// -->
 			<!-- ////////////// Main ////////////// -->
 			<main>

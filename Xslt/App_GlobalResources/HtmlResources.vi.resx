@@ -146,4 +146,16 @@
 	<data name="ViewMoreText" xml:space="preserve">
 		<value>Xem thêm</value>
 	</data>
+	<data name="JobInfoText" xml:space="preserve">
+		<value>Thông tin tuyển dụng</value>
+	</data>
+	<data name="ApplyJobText" xml:space="preserve">
+		<value>Ứng tuyển ngay</value>
+	</data>
+	<data name="DownloadJobApplicationFormText" xml:space="preserve">
+		<value>Tải xuống Form tuyển dụng</value>
+	</data>
+	<data name="OtherJobsText" xml:space="preserve">
+		<value>Vị trí khác</value>
+	</data>
 </root>

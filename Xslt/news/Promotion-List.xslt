@@ -46,14 +46,19 @@
 							<xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of>
 						</a>
 					</h3>
-					<p class="sub-title">
-						<span class="mdi mdi-timer"></span>
-						<span><xsl:value-of select="SubTitle" disable-output-escaping="yes"></xsl:value-of></span>
-					</p>
+					<xsl:if test="SubTitle != ''">
+						<p class="sub-title">
+							<span class="mdi mdi-timer"></span>
+							<span><xsl:value-of select="SubTitle" disable-output-escaping="yes"></xsl:value-of></span>
+						</p>
+					</xsl:if>
+					
+					<xsl:if test="BriefContent != ''">
 					<p class="brief-content">
 						<span class="mdi mdi-map-marker"></span>
 						<span><xsl:value-of select="BriefContent" disable-output-escaping="yes"></xsl:value-of></span>
 					</p>
+					</xsl:if>
 				</div>
 			</div>
 		</div>
