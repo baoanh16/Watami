@@ -1,17 +1,21 @@
-.home-1, .home-1.ModuleContent
-	.imgbox
+.home-1
+	.video
+		overflow: hidden
 		position: relative
-		@media (max-width: 767.9px)
+		@media (max-width: 767.98px)
 			margin: 0 -15px
-		>img
-			opacity: 0
-			visibility: hidden
+		video
+			height: 650px
 			width: 100%
-	a
-		position: absolute
-		top: 50%
-		left: 50%
-		transform: translate(-50%,-50%)
-		@media (max-width: 1024px)
-			img
-				max-width: 50px
+			object-fit: cover
+	.ModuleContent
+		a
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			transition: none
+			@media (max-width: 1024px)
+				display: block!important
+				img
+					max-width: 50px

@@ -274,7 +274,7 @@ script(src='//oss.maxcdn.com/respond/1.4.2/respond.min.js')
 					<div class="container">
 						<div class="row">
 							<portal:modulewrapper id="mdl218" runat="server" configuremoduleid="218" />
-							<div class="copyright">
+							<div class="copyright col-auto">
 								<portal:modulewrapper id="mdl219" runat="server" configuremoduleid="219" />
 								<div class="copyright-text">
 									<p>Copyright © 2019 SonKim Retail. Designed by Cánh Cam.</p>

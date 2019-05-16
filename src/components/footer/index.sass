@@ -20,9 +20,6 @@ footer
 				margin-left: 10px
 				margin-right: 10px
 		@media (min-width: 1025px)
-			flex: 0 0 auto
-			width: auto
-			max-width: 100%
 			margin-bottom: 0
 			a
 				+ a
@@ -32,9 +29,12 @@ footer
 			flex: 0 0 100%
 			max-width: 100%
 		@media (min-width: 1025px)
+			-webkit-box-flex: 0
+			-ms-flex: 0 0 auto
+			flex: 0 0 auto
+			width: auto
 			max-width: 100%
-			flex-grow: 1
-			flex-basis: 0
+			margin-left: auto
 	.copyright-text
 		font-size: 12px
 		color: white

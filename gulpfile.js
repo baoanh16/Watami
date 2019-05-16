@@ -48,6 +48,12 @@ gulp.task("copyImages", function () {
 	})
 		.pipe(gulp.dest("dist/img"));
 })
+gulp.task("copyVideos", function () {
+	return gulp.src("src/video/**/**.**", {
+		allowEmpty: true
+	})
+		.pipe(gulp.dest("dist/video"));
+})
 
 // Start task js
 gulp.task("globalJs", function () {
@@ -195,6 +201,7 @@ gulp.task("serve", function () {
 gulp.task("default", gulp.series(
 	"clean",
 	"copyImages",
+	"copyVideos",
 	"copyFonts",
 	"globalCss",
 	"globalJs",
