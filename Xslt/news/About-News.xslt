@@ -146,7 +146,7 @@
 
 	<xsl:template match="NewsImages">
 		<xsl:if test="position()&gt;1">
-			<div class="col-sm-6 col-lg-3">
+			<div class="col-6 col-lg-3">
 				<a data-fancybox="">
 					<xsl:attribute name="href">
 						<xsl:value-of select="Url"></xsl:value-of>

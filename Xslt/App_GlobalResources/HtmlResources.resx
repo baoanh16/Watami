@@ -158,4 +158,7 @@
 	<data name="OtherJobsText" xml:space="preserve">
 		<value>Other positions</value>
 	</data>
+	<data name="NewsOtherText" xml:space="preserve">
+		<value>Other news</value>
+	</data>
 </root>

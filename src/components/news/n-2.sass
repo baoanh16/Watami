@@ -1,1 +1,44 @@
 .news-detail
+	time
+		font-size: 14px
+		color: #999999
+	hr
+		border: 0
+		border-top: 1px solid rgba(0,0,0,.15)
+	img
+		width: 100%
+	.brief-content, .full-content
+		p,ul
+			font-size: 16px
+			color: #666666
+	.other-news
+		h2
+			font-size: 24px
+			text-transform: uppercase
+			margin-bottom: 0
+			border-bottom: 2px solid #fe0000
+			margin-bottom: 30px
+			@media (max-width: 1024px)
+				margin-top: 30px
+		a
+			display: block
+			font-size: 15px
+			font-weight: 400
+			line-height: 22px
+			color: #333
+			transition: .3s ease-in-out
+			text-decoration: none
+			&:hover
+				color: #0772ba
+		.item
+			margin-bottom: 25px
+			@media (max-width: 1024.98px)
+				display: flex
+				.imgbox
+					flex: 0 0 140px
+					max-width: 140px
+				.info
+					padding-left: 15px
+					flex-basis: 0
+					flex-grow: 1
+					max-width: 100%

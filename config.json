@@ -13,11 +13,7 @@
 		"_plugins/ls.unveilhooks.min.js",
 		"_plugins/mapping.js",
 		"_plugins/mapping-listener.js",
-		"_plugins/bgimg.js",
-		"_plugins/jquery-ui-1.10.3.custom.js",
-		"_plugins/jquery.mousewheel.js",
-		"_plugins/jquery.kinetic.js",
-		"_plugins/jquery.smoothdivscroll-1.3.js"
+		"_plugins/bgimg.js"
 	],
 	"globalCss": [
 		"_plugins/grid.css",

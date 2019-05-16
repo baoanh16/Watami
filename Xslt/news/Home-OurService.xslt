@@ -20,7 +20,7 @@
 			<xsl:value-of select="Title"></xsl:value-of>
 		</xsl:attribute>
 		</img>
-		<a data-fancybox="home_video">
+		<a data-fancybox="home_video" class="home-1-button">
 			<xsl:attribute name="href">
 				<xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
 			</xsl:attribute>

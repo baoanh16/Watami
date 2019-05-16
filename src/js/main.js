@@ -22,6 +22,11 @@ $(document).ready(function () {
 			$('body').removeClass('overflow-hidden')
 		}
 	})
+	$('.overlay').on('click', function(){
+		$('header .header-nav-wrapper').removeClass('open')
+		$('.overlay').fadeOut(300);
+		$('body').removeClass('overflow-hidden')
+	})
 
 	$('header .search-toggle').on('click', function () {
 		$('header  .searchbox').toggleClass('open')
@@ -138,9 +143,6 @@ $(document).ready(function () {
 	})
 
 	
-	$("#logo-footer").smoothDivScroll({
-		autoScrollingMode: "onStart"
-	});
 });
 
 function playVideo() {
@@ -160,13 +162,6 @@ function playVideo() {
 		}
 	})
 
-	$(window).on('scroll', function () {
-		if ($(window).scrollTop() >= $('.home-1 .video .ModuleContent video').height() / 2) {
-			$('video').get(0).pause()
-		} else {
-			$('video').get(0).play()
-		}
-	})
 }
 
 
