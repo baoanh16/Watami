@@ -15,10 +15,12 @@
 				</time>
 				<hr/>
 				<div class="brief-content">
-					<p><b>
+					<p>
+						<b>
 							<xsl:value-of select="/NewsDetail/BriefContent" disable-output-escaping="yes">
 							</xsl:value-of>
-						</b></p>
+						</b>
+					</p>
 				</div>
 				<div class="full-content">
 					<xsl:value-of select="/NewsDetail/FullContent" disable-output-escaping="yes"></xsl:value-of>
@@ -35,10 +37,10 @@
 	<xsl:template match="NewsOther">
 		<div class="item">
 			<div class="imgbox">
-				<a>
-					<xsl:attribute name="href">
+				<a href="#">
+					<!-- <xsl:attribute name="href">
 						<xsl:value-of select="Url"></xsl:value-of>
-					</xsl:attribute>
+					</xsl:attribute> -->
 					<xsl:attribute name="title">
 						<xsl:value-of select="Title"></xsl:value-of>
 					</xsl:attribute>
@@ -54,10 +56,10 @@
 			</div>
 			<div class="info">
 				<time><xsl:value-of select="CreatedDate" disable-output-escaping="yes"></xsl:value-of></time>
-				<a>
-					<xsl:attribute name="href">
+				<a href="#">
+					<!-- <xsl:attribute name="href">
 						<xsl:value-of select="Url"></xsl:value-of>
-					</xsl:attribute>
+					</xsl:attribute> -->
 					<xsl:attribute name="title">
 						<xsl:value-of select="Title"></xsl:value-of>
 					</xsl:attribute>

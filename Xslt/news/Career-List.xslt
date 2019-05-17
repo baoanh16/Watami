@@ -39,9 +39,6 @@
 
 	<xsl:template match="News" mode="Desktop">
 		<tr>
-			<xsl:attribute name="datahref">
-				<xsl:value-of select="Url"></xsl:value-of>
-			</xsl:attribute>
 			<xsl:attribute name="data-href">
 				<xsl:value-of select="Url" disable-output-escaping="yes"></xsl:value-of>
 			</xsl:attribute>
@@ -73,10 +70,10 @@
 	<xsl:template match="News" mode="Mobile">
 
 		<div class="col-sm-6">
-			<a class="item">
-				<xsl:attribute name="href">
+			<a class="item" href="#">
+				<!-- <xsl:attribute name="href">
 					<xsl:value-of select="Url"></xsl:value-of>
-				</xsl:attribute>
+				</xsl:attribute> -->
 				<xsl:attribute name="title">
 					<xsl:value-of select="Title"></xsl:value-of>
 				</xsl:attribute>

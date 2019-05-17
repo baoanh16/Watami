@@ -19,10 +19,10 @@
 					<xsl:attribute name="data-bg">
 						<xsl:value-of select="ImageUrl" disable-output-escaping="yes"></xsl:value-of>
 					</xsl:attribute>
-					<a>
-						<xsl:attribute name="href">
+					<a href="#">
+						<!-- <xsl:attribute name="href">
 							<xsl:value-of select="Url"></xsl:value-of>
-						</xsl:attribute>
+						</xsl:attribute> -->
 						<xsl:attribute name="title">
 							<xsl:value-of select="Title"></xsl:value-of>
 						</xsl:attribute>
@@ -41,10 +41,10 @@
 						<xsl:value-of select="CreatedDate" disable-output-escaping="yes"></xsl:value-of>
 					</time>
 					<h3>
-						<a>
-							<xsl:attribute name="href">
+						<a href="#">
+							<!-- <xsl:attribute name="href">
 								<xsl:value-of select="Url"></xsl:value-of>
-							</xsl:attribute>
+							</xsl:attribute> -->
 							<xsl:attribute name="title">
 								<xsl:value-of select="Title"></xsl:value-of>
 							</xsl:attribute>
@@ -52,13 +52,13 @@
 						</a>
 						<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
 					</h3>
-					<a class="btn-viewmore-news">
-							<xsl:attribute name="href">
-								<xsl:value-of select="Url"></xsl:value-of>
-							</xsl:attribute>
-							<xsl:attribute name="title">
-								<xsl:value-of select="Title"></xsl:value-of>
-							</xsl:attribute>
+					<a class="btn-viewmore-news" href="#">
+						<!-- <xsl:attribute name="href">
+							<xsl:value-of select="Url"></xsl:value-of>
+						</xsl:attribute> -->
+						<xsl:attribute name="title">
+							<xsl:value-of select="Title"></xsl:value-of>
+						</xsl:attribute>
 						<span><xsl:value-of select="/NewsList/ViewMoreText" disable-output-escaping="yes"></xsl:value-of></span>
 						<span class="fas fa-long-arrow-alt-right"></span>
 					</a>

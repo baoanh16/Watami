@@ -29,17 +29,6 @@
 							</div>
 							<xsl:value-of disable-output-escaping='yes' select='/NewsDetail/FullContent'>
 							</xsl:value-of>
-							<!-- <h2>
-								<span>
-									<xsl:value-of disable-output-escaping='yes' select='/NewsDetail/DeadlineText'>
-									</xsl:value-of>
-									<xsl:text>: </xsl:text>
-								</span>
-								<span>
-									<xsl:value-of disable-output-escaping='yes' select='/NewsDetail/SubTitle'>
-									</xsl:value-of>
-								</span>
-							</h2> -->
 						</div>
 						<div class="buttons">
 							<a class="btn-apply" href="#">
@@ -47,6 +36,7 @@
 									<xsl:value-of disable-output-escaping='yes' select='/NewsDetail/ApplyJobText'>
 									</xsl:value-of>
 								</span>
+								<span class="mdi mdi-ray-start-arrow"></span>
 							</a>
 							<a class="btn-download">
 								<xsl:attribute name='href'>
@@ -57,6 +47,7 @@
 									<xsl:value-of disable-output-escaping='yes'
 										select='/NewsDetail/DownloadJobApplicationFormText'></xsl:value-of>
 								</span>
+								<span class="mdi mdi-download"></span>
 							</a>
 						</div>
 						<div class="form-apply">

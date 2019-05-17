@@ -17,10 +17,10 @@
 					<xsl:attribute name="data-bg">
 						<xsl:value-of select="ImageUrl" disable-output-escaping="yes"></xsl:value-of>
 					</xsl:attribute>
-					<a>
-						<xsl:attribute name="href">
+					<a href="#">
+						<!-- <xsl:attribute name="href">
 							<xsl:value-of select="Url"></xsl:value-of>
-						</xsl:attribute>
+						</xsl:attribute> -->
 						<xsl:attribute name="title">
 							<xsl:value-of select="Title"></xsl:value-of>
 						</xsl:attribute>
@@ -33,13 +33,19 @@
 						</xsl:attribute>
 						</img>
 					</a>
+					<div class="created-date">
+						<span class="date"><xsl:value-of select="CreatedDD" disable-output-escaping="yes"></xsl:value-of>
+						</span>
+						<hr></hr>
+						<span class="month"><xsl:value-of select="CreatedMM" disable-output-escaping="yes"></xsl:value-of></span>
+					</div>
 				</div>
 				<div class="info">
 					<h3>
-						<a>
-							<xsl:attribute name="href">
+						<a href="#">
+							<!-- <xsl:attribute name="href">
 								<xsl:value-of select="Url"></xsl:value-of>
-							</xsl:attribute>
+							</xsl:attribute> -->
 							<xsl:attribute name="title">
 								<xsl:value-of select="Title"></xsl:value-of>
 							</xsl:attribute>

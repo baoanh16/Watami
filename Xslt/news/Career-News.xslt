@@ -17,7 +17,9 @@
 
 	<xsl:template match="News">
 		<div class="col-lg-6 content">
-			<h2><xsl:value-of select="Title" disable-output-escaping="yes"></xsl:value-of><xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of></h2>
+			<h2>
+			<xsl:value-of select="Title" disable-output-escaping="yes">
+			</xsl:value-of><xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of></h2>
 			<br/>
 			<xsl:value-of select="FullContent" disable-output-escaping="yes"></xsl:value-of>
 		</div>
