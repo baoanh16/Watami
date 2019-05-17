@@ -26,7 +26,7 @@
 			</xsl:attribute>
 		</video>
 		<a class="home-1-button play" href="#" style="display: none">
-			<img src="/Data/Sites/1/media/img/video_button.png" alt="" />
+			<img src="/Data/Sites/1/media/img/video_pause.png" alt="" />
 		</a>
 		<!-- <a data-fancybox="home_video" class="home-1-button">
 			<xsl:attribute name="href">

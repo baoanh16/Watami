@@ -169,7 +169,7 @@
 	</xsl:template>
 
 	<xsl:template match="News" mode="News-2">
-		<div class="col-lg-4">
+		<div class="col-md-6">
 			<div class="item">
 				<a href="javascript:void(0)">
 					<img class="lazyload blur-up">

@@ -235,16 +235,19 @@ $(document).ready(function () {
 			e.preventDefault()
 			if ($('.home-4 .video a').hasClass('play')) {
 				$('.home-4 video').get(0).pause()
+				$('.home-4 .video a img').attr('src', '/Data/Sites/1/media/img/video_button.png')
 				$('.home-4 .video a').toggleClass('play')
 			} else {
 				$('.home-4 video').get(0).play()
 				$('.home-4 .video a').toggleClass('play')
+				$('.home-4 .video a img').attr('src', '/Data/Sites/1/media/img/video_pause.png')
 			}
 		})
 		var isPlayed = false;
 		$(window).on('scroll', function () {
 			if ($(window).scrollTop() > $('.home-4').offset().top - $('header').height() - $(window).height() && isPlayed == false) {
 				$('.home-4 video').get(0).play()
+				$('.home-4 .video a img').attr('src', '/Data/Sites/1/media/img/video_pause.png')
 				isPlayed = true;
 			}
 		})
@@ -267,11 +270,13 @@ function playVideo() {
 	$('.home-1 .video .ModuleContent video, .home-1 .video .ModuleContent a').on('click', function (e) {
 		e.preventDefault()
 		if ($('.home-1 .video .ModuleContent a').hasClass('play')) {
-			$('video').get(0).pause()
+			$('.home-1 video').get(0).pause()
+			$('.home-1 .video a img').attr('src', '/Data/Sites/1/media/img/video_button.png')
 			$('.home-1 .video .ModuleContent a').toggleClass('play')
 		} else {
-			$('video').get(0).play()
+			$('.home-1 video').get(0).play()
 			$('.home-1 .video .ModuleContent a').toggleClass('play')
+			$('.home-1 .video a img').attr('src', '/Data/Sites/1/media/img/video_pause.png')
 		}
 	})
 }

@@ -21,14 +21,14 @@
 	<xsl:template match="News">
 		<a data-fancybox="home-menu">
 			<xsl:attribute name="href">
-				<xsl:value-of select="ImageUrl"></xsl:value-of>
+				<xsl:value-of select="ThumbnailUrl"></xsl:value-of>
 			</xsl:attribute>
 			<xsl:attribute name="title">
 				<xsl:value-of select="Title"></xsl:value-of>
 			</xsl:attribute>
 			<img class="lazyload">
 			<xsl:attribute name="data-src">
-				<xsl:value-of select="ThumbnailUrl"></xsl:value-of>
+				<xsl:value-of select="ImageUrl"></xsl:value-of>
 			</xsl:attribute>
 			<xsl:attribute name="alt">
 				<xsl:value-of select="Title"></xsl:value-of>
