@@ -20,13 +20,13 @@
 			<xsl:value-of select="Title"></xsl:value-of>
 		</xsl:attribute>
 		</img> -->
-		<video playsinline="playsinline">
+		<video playsinline="playsinline" muted="muted">
 			<xsl:attribute name="src">
 				<xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
 			</xsl:attribute>
 		</video>
 		<a class="home-1-button play" href="#" style="display: none">
-			<img src="/Data/Sites/1/media/img/video_pause.png" alt="" />
+			<img src="/Data/Sites/1/media/img/video_button.png" alt="" />
 		</a>
 		<!-- <a data-fancybox="home_video" class="home-1-button">
 			<xsl:attribute name="href">

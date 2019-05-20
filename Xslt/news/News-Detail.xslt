@@ -15,12 +15,10 @@
 				</time>
 				<hr/>
 				<div class="brief-content">
-					<p>
-						<b>
+					<p><b>
 							<xsl:value-of select="/NewsDetail/BriefContent" disable-output-escaping="yes">
 							</xsl:value-of>
-						</b>
-					</p>
+						</b></p>
 				</div>
 				<div class="full-content">
 					<xsl:value-of select="/NewsDetail/FullContent" disable-output-escaping="yes"></xsl:value-of>

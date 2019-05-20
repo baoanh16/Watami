@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+	$('body').trigger('click')
 	$('[data-bg]').each(function () {
 		$(this).addClass('data-bg')
 	})
