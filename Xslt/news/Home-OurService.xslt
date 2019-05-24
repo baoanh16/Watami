@@ -20,7 +20,7 @@
 			<xsl:value-of select="Title"></xsl:value-of>
 		</xsl:attribute>
 		</img> -->
-		<video playsinline="playsinline" muted="muted">
+		<video playsinline="playsinline" muted="muted" controls="controls">
 			<xsl:attribute name="src">
 				<xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
 			</xsl:attribute>
