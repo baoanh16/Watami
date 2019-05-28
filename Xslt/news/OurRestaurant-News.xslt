@@ -147,16 +147,16 @@
 				<div class="title">
 					<h4>
 						<a href="#">
-							<!-- <xsl:attribute name="href">
+							<xsl:attribute name="href">
 								<xsl:value-of select="FileUrl"></xsl:value-of>
-							</xsl:attribute> -->
+							</xsl:attribute>
 							<xsl:attribute name="title">
 								<xsl:value-of select="Title"></xsl:value-of>
 							</xsl:attribute>
-							<!-- <xsl:attribute name="data-fancybox">
+							<xsl:attribute name="data-fancybox">
 								<xsl:text>menu_</xsl:text>
 								<xsl:value-of disable-output-escaping="yes" select="position()"></xsl:value-of>
-							</xsl:attribute> -->
+							</xsl:attribute>
 							<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
 						</a>
 						<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>

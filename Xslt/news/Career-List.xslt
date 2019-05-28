@@ -71,9 +71,9 @@
 
 		<div class="col-sm-6">
 			<a class="item" href="#">
-				<!-- <xsl:attribute name="href">
+				<xsl:attribute name="href">
 					<xsl:value-of select="Url"></xsl:value-of>
-				</xsl:attribute> -->
+				</xsl:attribute> 
 				<xsl:attribute name="title">
 					<xsl:value-of select="Title"></xsl:value-of>
 				</xsl:attribute>

@@ -257,8 +257,10 @@ $(document).ready(function () {
 		e.preventDefault()
 		$('.career-detail .form-apply').slideToggle();
 	})
-
-
+	$('#logo-footer').simplyScroll({
+		speed: 1,
+		frameRate: 30,
+	});
 });
 
 function playVideo() {

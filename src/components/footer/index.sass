@@ -5,32 +5,59 @@ footer
 		background-size: cover
 		background-position: center
 		background-repeat: no-repeat
-	.logo-list
-		margin-bottom: 30px
 		.col-md-auto
-			@media (max-width: 767.98px)
-				margin-bottom: 20px
-				text-align: center
-		@media (min-width: 1025px)
-			.col-md
-				border-right: 1px solid rgba(255,255,255,.15)
-		nav
 			display: flex
 			align-items: center
-			height: 100%
-			flex-wrap: wrap
-			justify-content: center
-		@media (max-width: 1024px)
-			margin-bottom: 20px
-			a
-				margin-bottom: 15px
-				margin-left: 10px
-				margin-right: 10px
-		@media (min-width: 1025px)
+	.logo-list
+		margin-bottom: 30px
+		#logo-footer
+			display: flex
+			width: 4152px!important
+		.ModuleContent
+			@media (max-width: 1024.98px)
+				overflow: hidden
+		.simply-scroll
+			height: auto!important
 			margin-bottom: 0
-			a
-				+ a
-					margin-left: 25px
+			@media (max-width: 1024.98px)
+				margin-top: 15px
+			.simply-scroll-clip
+				height: auto!important
+		.list
+			display: flex
+			.group
+				.group-title
+					color: white
+				.group-logo
+					border-left: 1px solid white
+					border-right: 1px solid white
+					padding: 0
+					display: flex
+					height: 60px
+					align-items: center
+					img
+						height: 100%
+					a
+						padding: 10px
+						height: 100%
+						display: inline-block
+		// nav
+		// 	display: flex
+		// 	align-items: center
+		// 	height: 100%
+		// 	flex-wrap: wrap
+		// 	justify-content: center
+		// @media (max-width: 1024px)
+		// 	margin-bottom: 20px
+		// 	a
+		// 		margin-bottom: 15px
+		// 		margin-left: 10px
+		// 		margin-right: 10px
+		// @media (min-width: 1025px)
+		// 	margin-bottom: 0
+		// 	a
+		// 		+ a
+		// 			margin-left: 25px
 	.copyright
 		@media (max-width: 1024px)
 			flex: 0 0 100%

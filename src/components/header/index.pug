@@ -3,7 +3,7 @@ header
 		.row.no-gutters
 			.logo-wrapper
 				a(href="/")
-					img.lazyload(data-src="./img/watami_logo.png", alt="")
+					img.lazyload(data-src="http://www.watami.vn/Data/Sites/1/media/img/watami_logo.png", alt="")
 				a(href="#")
 					img.lazyload(data-src="./img/sonkim_logo.png", alt="")
 			.header-nav-wrapper
@@ -28,16 +28,33 @@ header
 								span.mdi.mdi-magnify
 				.bottom
 					.main-nav
-						nav
-							a(href="/") HOME
-							a(href="/aboutus.html") ABOUT US
-							a(href="restaurant.html") OUR RESTAURANTS
-							a(href="location.html") LOCATIONS
-							a.active(href="promotion.html") PROMOTIONS
-							a(href="news.html") NEWS - EVENTS
-							a(href="/reservation.html") RESERVATION
-							a(href="/career.html") CAREER
-							a(href="/contact.html") CONTACT
+						ul
+							li
+								a(href="/") HOME
+							li
+								a(href="/aboutus.html") ABOUT US
+							li
+								a(href="restaurant.html") OUR RESTAURANTS
+								nav.dropdown
+									a(href="#") Link 1
+									a(href="#") Link 1
+									a(href="#") Link 1
+							li
+								a(href="location.html") LOCATIONS
+								nav.dropdown
+									a(href="#") Link 1
+									a(href="#") Link 1
+									a(href="#") Link 1
+							li
+								a.active(href="promotion.html") PROMOTIONS
+							li
+								a(href="news.html") NEWS - EVENTS
+							li
+								a(href="/reservation.html") RESERVATION
+							li
+								a(href="/career.html") CAREER
+							li
+								a(href="/contact.html") CONTACT
 			.menu-toggle
 				span.mdi.mdi-menu
 .overlay

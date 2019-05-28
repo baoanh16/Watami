@@ -12,6 +12,13 @@
 			<xsl:attribute name="data-bg">
 				<xsl:value-of select="ImageUrl" disable-output-escaping="yes"></xsl:value-of>
 			</xsl:attribute>
+			<xsl:if test="Description != ''">
+				<video muted="" autoplay="">
+					<xsl:attribute name="src">
+						<xsl:value-of disable-output-escaping="yes" select="Description"></xsl:value-of>
+					</xsl:attribute>
+				</video>
+			</xsl:if>
 		</div>
 	</xsl:template>
 </xsl:stylesheet>

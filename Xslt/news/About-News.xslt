@@ -63,6 +63,20 @@
 							<xsl:value-of disable-output-escaping="yes" select="Description"></xsl:value-of>
 						</div>
 						<div class="row blocks">
+							<div class="col-12">
+								<div class="imgbox" style="text-align: center; margin-top: 20px">
+								<a href="javascript:void(0)">
+									<img class="lazyload blur-up">
+									<xsl:attribute name="data-src">
+										<xsl:text disable-output-escaping="yes">/Data/Sites/1/media/img/About%20us%201.jpg</xsl:text>
+									</xsl:attribute>
+									<xsl:attribute name="alt">
+										<xsl:value-of select="Title"></xsl:value-of>
+									</xsl:attribute>
+									</img>
+								</a>
+								</div>
+							</div>
 							<div class="col-lg-3"></div>
 							<div class="col-lg-3">
 								<a class="block" href="javascript:void(0)">
@@ -171,7 +185,9 @@
 	<xsl:template match="News" mode="News-2">
 		<div class="col-md-6">
 			<div class="item">
-				<a href="javascript:void(0)">
+				<xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
+				<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
+				<a href="javascript:void(0)" style="margin-top: 20px; text-align: center">
 					<img class="lazyload blur-up">
 					<xsl:attribute name="data-src">
 						<xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -181,8 +197,6 @@
 					</xsl:attribute>
 					</img>
 				</a>
-				<xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
-				<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
 			</div>
 		</div>
 	</xsl:template>
