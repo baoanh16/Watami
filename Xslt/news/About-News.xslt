@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<xsl:stylesheet version='1.0' xmlns:xsl='http://www.w3.org/1999/XSL/Transform'
+<xsl:stylesheet version='1.0'
+	xmlns:xsl='http://www.w3.org/1999/XSL/Transform'
 	xmlns:msxsl='urn:schemas-microsoft-com:xslt' exclude-result-prefixes='msxsl'>
 	<xsl:output method='html' indent='yes' />
-
 	<xsl:template match='/'>
 		<div class="watami-nav">
 			<div class="container">
@@ -16,7 +16,6 @@
 		</div>
 		<xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
 	</xsl:template>
-
 	<xsl:template match="Zone" mode="Nav-1">
 		<a>
 			<xsl:attribute name="data-href">
@@ -26,7 +25,6 @@
 			<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
 		</a>
 	</xsl:template>
-
 	<xsl:template match="Zone" mode="Nav-2">
 		<option value="#section-1">
 			<xsl:attribute name="value">
@@ -36,7 +34,6 @@
 			<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
 		</option>
 	</xsl:template>
-
 	<xsl:template match="Zone">
 		<xsl:choose>
 			<xsl:when test="position()=1">
@@ -63,47 +60,35 @@
 							<xsl:value-of disable-output-escaping="yes" select="Description"></xsl:value-of>
 						</div>
 						<div class="row blocks">
-							<div class="col-12">
-								<div class="imgbox" style="text-align: center; margin-top: 20px">
-								<a href="javascript:void(0)">
-									<img class="lazyload blur-up">
-									<xsl:attribute name="data-src">
-										<xsl:text disable-output-escaping="yes">/Data/Sites/1/media/img/About%20us%201.jpg</xsl:text>
-									</xsl:attribute>
-									<xsl:attribute name="alt">
-										<xsl:value-of select="Title"></xsl:value-of>
-									</xsl:attribute>
-									</img>
-								</a>
-								</div>
-							</div>
 							<div class="col-lg-3"></div>
 							<div class="col-lg-3">
 								<a class="block" href="javascript:void(0)">
 									<img class="lazyload blur-up">
-									<xsl:attribute name="data-src">
-										<xsl:value-of select="ImageUrl"></xsl:value-of>
-									</xsl:attribute>
-									<xsl:attribute name="alt">
-										<xsl:value-of select="Title"></xsl:value-of>
-									</xsl:attribute>
+										<xsl:attribute name="data-src">
+											<xsl:value-of select="ImageUrl"></xsl:value-of>
+										</xsl:attribute>
+										<xsl:attribute name="alt">
+											<xsl:value-of select="Title"></xsl:value-of>
+										</xsl:attribute>
 									</img>
 								</a>
 							</div>
 							<div class="col-lg-3">
 								<a class="block" href="javascript:void(0)">
 									<img class="lazyload blur-up">
-									<xsl:attribute name="data-src">
-										<xsl:value-of select="SecondImageUrl"></xsl:value-of>
-									</xsl:attribute>
-									<xsl:attribute name="alt">
-										<xsl:value-of select="Title"></xsl:value-of>
-									</xsl:attribute>
+										<xsl:attribute name="data-src">
+											<xsl:value-of select="SecondImageUrl"></xsl:value-of>
+										</xsl:attribute>
+										<xsl:attribute name="alt">
+											<xsl:value-of select="Title"></xsl:value-of>
+										</xsl:attribute>
 									</img>
 								</a>
 							</div>
 							<div class="col-lg-3"></div>
 						</div>
+						<xsl:apply-templates select="News" mode="News-2-Images"></xsl:apply-templates>
+						<!-- <div class="row"><div class="col-12"><div class="imgbox" style="text-align: center; margin-top: 20px"><a href="javascript:void(0)"><img class="lazyload blur-up"><xsl:attribute name="data-src"><xsl:text disable-output-escaping="yes">/Data/Sites/1/media/img/About%20us%201.jpg</xsl:text></xsl:attribute><xsl:attribute name="alt"><xsl:value-of select="Title"></xsl:value-of></xsl:attribute></img></a></div></div></div> -->
 						<div class="row">
 							<div class="col-lg-1"></div>
 							<div class="col-lg-10">
@@ -129,7 +114,6 @@
 			</xsl:when>
 		</xsl:choose>
 	</xsl:template>
-
 	<xsl:template match="News" mode="News-1">
 		<div class="col-lg-6 content">
 			<xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
@@ -141,23 +125,28 @@
 					<xsl:value-of disable-output-escaping="yes" select="ImageUrl"></xsl:value-of>
 				</xsl:attribute>
 				<img class="lazyload blur-up">
-				<xsl:attribute name="data-src">
-					<xsl:value-of select="ImageUrl"></xsl:value-of>
-				</xsl:attribute>
-				<xsl:attribute name="alt">
-					<xsl:value-of select="Title"></xsl:value-of>
-				</xsl:attribute>
+					<xsl:attribute name="data-src">
+						<xsl:value-of select="ImageUrl"></xsl:value-of>
+					</xsl:attribute>
+					<xsl:attribute name="alt">
+						<xsl:value-of select="Title"></xsl:value-of>
+					</xsl:attribute>
 				</img>
 			</a>
 		</div>
 	</xsl:template>
-
 	<xsl:template match="News" mode="News-1-Images">
 		<div class="row images">
 			<xsl:apply-templates select="NewsImages"></xsl:apply-templates>
 		</div>
 	</xsl:template>
-
+	<xsl:template match="News" mode="News-2-Images">
+		<xsl:if test="position()=1">
+			<div class="row images">
+				<xsl:apply-templates select="NewsImages" mode="NewsImages2"></xsl:apply-templates>
+			</div>
+		</xsl:if>
+	</xsl:template>
 	<xsl:template match="NewsImages">
 		<xsl:if test="position()&gt;1">
 			<div class="col-6 col-lg-3">
@@ -169,36 +158,56 @@
 						<xsl:value-of select="Title"></xsl:value-of>
 					</xsl:attribute>
 					<img class="lazyload blur-up">
+						<xsl:attribute name="data-src">
+							<xsl:value-of select="ImageUrl"></xsl:value-of>
+						</xsl:attribute>
+						<xsl:attribute name="alt">
+							<xsl:value-of select="Title"></xsl:value-of>
+						</xsl:attribute>
+					</img>
+				</a>
+			</div>
+		</xsl:if>
+	</xsl:template>
+	<xsl:template match="NewsImages" mode="NewsImages2">
+		<div class="col-6 col-lg-3">
+			<a data-fancybox="gallery">
+				<xsl:attribute name="href">
+					<xsl:value-of select="ImageUrl"></xsl:value-of>
+				</xsl:attribute>
+				<xsl:attribute name="title">
+					<xsl:value-of select="Title"></xsl:value-of>
+				</xsl:attribute>
+				<img class="lazyload blur-up">
 					<xsl:attribute name="data-src">
 						<xsl:value-of select="ImageUrl"></xsl:value-of>
 					</xsl:attribute>
 					<xsl:attribute name="alt">
 						<xsl:value-of select="Title"></xsl:value-of>
 					</xsl:attribute>
-					</img>
-				</a>
-			</div>
-		</xsl:if>
-
+				</img>
+			</a>
+		</div>
 	</xsl:template>
-
 	<xsl:template match="News" mode="News-2">
+		<xsl:if test="position()&gt;1">
 		<div class="col-md-6">
 			<div class="item">
 				<xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
 				<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
 				<a href="javascript:void(0)" style="margin-top: 20px; text-align: center">
 					<img class="lazyload blur-up">
-					<xsl:attribute name="data-src">
-						<xsl:value-of select="ImageUrl"></xsl:value-of>
-					</xsl:attribute>
-					<xsl:attribute name="alt">
-						<xsl:value-of select="Title"></xsl:value-of>
-					</xsl:attribute>
+						<xsl:attribute name="data-src">
+							<xsl:value-of select="ImageUrl"></xsl:value-of>
+						</xsl:attribute>
+						<xsl:attribute name="alt">
+							<xsl:value-of select="Title"></xsl:value-of>
+						</xsl:attribute>
 					</img>
 				</a>
 			</div>
 		</div>
+			
+		</xsl:if>
 	</xsl:template>
-
 </xsl:stylesheet>
