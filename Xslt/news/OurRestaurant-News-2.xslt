@@ -1,6 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<xsl:stylesheet version='1.0'
-	xmlns:xsl='http://www.w3.org/1999/XSL/Transform'
+<xsl:stylesheet version='1.0' xmlns:xsl='http://www.w3.org/1999/XSL/Transform'
 	xmlns:msxsl='urn:schemas-microsoft-com:xslt' exclude-result-prefixes='msxsl'>
 	<xsl:output method='html' indent='yes' />
 	<xsl:template match='/'>
@@ -73,12 +72,12 @@
 			<div class="col-lg-6">
 				<div class="imgbox">
 					<img>
-						<xsl:attribute name="src">
-							<xsl:value-of select="ImageUrl"></xsl:value-of>
-						</xsl:attribute>
-						<xsl:attribute name="alt">
-							<xsl:value-of select="Title"></xsl:value-of>
-						</xsl:attribute>
+					<xsl:attribute name="src">
+						<xsl:value-of select="ImageUrl"></xsl:value-of>
+					</xsl:attribute>
+					<xsl:attribute name="alt">
+						<xsl:value-of select="Title"></xsl:value-of>
+					</xsl:attribute>
 					</img>
 				</div>
 			</div>
@@ -88,12 +87,12 @@
 		<div class="swiper-slide">
 			<div class="imgbox">
 				<img>
-					<xsl:attribute name="src">
-						<xsl:value-of select="ImageUrl"></xsl:value-of>
-					</xsl:attribute>
-					<xsl:attribute name="alt">
-						<xsl:value-of select="Title"></xsl:value-of>
-					</xsl:attribute>
+				<xsl:attribute name="src">
+					<xsl:value-of select="ImageUrl"></xsl:value-of>
+				</xsl:attribute>
+				<xsl:attribute name="alt">
+					<xsl:value-of select="Title"></xsl:value-of>
+				</xsl:attribute>
 				</img>
 				<a>
 					<xsl:attribute name="data-fancybox">
@@ -118,7 +117,7 @@
 		<div class="col-lg-4 col-md-6">
 			<a href="#">
 				<xsl:attribute name="href">
-					<xsl:value-of select="ThumbnailUrl"></xsl:value-of>
+					<xsl:value-of select="ImageUrl"></xsl:value-of>
 				</xsl:attribute>
 				<xsl:attribute name="title">
 					<xsl:value-of select="Title"></xsl:value-of>
@@ -130,12 +129,12 @@
 				<div class="menu-item">
 					<div class="imgbox">
 						<img class="lazyload">
-							<xsl:attribute name="data-src">
-								<xsl:value-of select="ImageUrl"></xsl:value-of>
-							</xsl:attribute>
-							<xsl:attribute name="alt">
-								<xsl:value-of select="Title"></xsl:value-of>
-							</xsl:attribute>
+						<xsl:attribute name="data-src">
+							<xsl:value-of select="ImageUrl"></xsl:value-of>
+						</xsl:attribute>
+						<xsl:attribute name="alt">
+							<xsl:value-of select="Title"></xsl:value-of>
+						</xsl:attribute>
 						</img>
 					</div>
 					<div class="title">
@@ -145,7 +144,31 @@
 					</div>
 				</div>
 			</a>
+			<xsl:if test="count(NewsImages) &gt; 1">
+				<div class="d-none">
+					<xsl:apply-templates select="NewsImages">
+						<xsl:with-param select="position()" name="NewsPosition"></xsl:with-param>
+					</xsl:apply-templates>
+				</div>
+			</xsl:if>
 			<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
 		</div>
+	</xsl:template>
+	<xsl:template match="NewsImages">
+		<xsl:param name="NewsPosition"></xsl:param>
+		<xsl:if test="position() &gt; 1">
+			<a>
+				<xsl:attribute name="href">
+					<xsl:value-of select="ImageUrl"></xsl:value-of>
+				</xsl:attribute>
+				<xsl:attribute name="title">
+					<xsl:value-of select="Title"></xsl:value-of>
+				</xsl:attribute>
+				<xsl:attribute name="data-fancybox">
+					<xsl:text>menu_</xsl:text>
+					<xsl:value-of disable-output-escaping="yes" select="$NewsPosition"></xsl:value-of>
+				</xsl:attribute>
+			</a>
+		</xsl:if>
 	</xsl:template>
 </xsl:stylesheet>
