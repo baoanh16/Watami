@@ -1,0 +1,22 @@
+.watami-form-v1 .form-group.qdropdown.time{
+    width: calc(25% - 25px);
+    margin-right: 30px;
+}
+.watami-form-v1 .form-group.qdropdown.time2{
+    margin-right: 0;
+}
+.watami-form-v1 .form-group.qdropdown.time2 label{
+    visibility: hidden;
+}
+@media(max-width: 1025px){
+    .watami-form-v1 .form-group.qdropdown.time {
+    width: calc(50% - 15px);
+    float: left;
+}
+}
+.fancybox-content{
+    padding: 0
+}
+.fancybox-close-small{
+    color: #fff!important
+}

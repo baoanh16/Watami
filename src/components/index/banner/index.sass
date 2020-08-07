@@ -1,0 +1,33 @@
+.primary-banner
+	position: relative
+	z-index: 1
+
+	.wrapper
+		a
+			+img-ratio(590/1600)
+.home-lp-link
+	background: #f7f7f7
+	height: 40px
+	.container
+		height: 100%
+	ul
+		list-style-type: none
+		height: 100%
+		padding: 0
+		margin: 0
+		display: flex
+		justify-content: center
+		align-items: center
+		li
+			display: inline-block
+			padding: 0 30px
+			a
+				font-size: .875rem
+				color: #333333
+				font-weight: 300
+	@media screen and ( max-width: 1024px)
+		.container
+			overflow-x: auto
+			ul
+				white-space: nowrap
+		

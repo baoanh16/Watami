@@ -1,0 +1,16 @@
+extends _layout.pug
+
+block var
+	- var title = 'Contact'
+	- var bodyClass = 'contact-page'
+
+block main
+	// Includes components here
+	include ../components/index/banner/index.pug
+	.service-menu-bg
+		include ../components/index/service/index.pug
+		include ../components/index/menu/index.pug
+	.home-drink-section
+		include ../components/index/drink/index.pug
+	include ../components/index/gallery/index.pug
+	include ../components/index/contact/index.pug

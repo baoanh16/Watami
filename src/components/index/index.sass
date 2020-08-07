@@ -1,0 +1,191 @@
+.fluid-section-wrapper
+	.fluid-section
+		overflow: hidden
+		position: relative
+		@media (max-width: 1024.98px)
+			display: flex
+			flex-direction: column
+			.container
+				order: 2
+			.container-fluid
+				order: 1
+		.container
+			height: 500px
+			min-height: 500px
+			position: relative
+			@media screen and(max-width:1441px)
+				height: 500px
+				min-height: 500px
+			@media screen and ( max-width:1024px)
+				height: auto
+				min-height: 100%
+				max-width: 100% !important
+			.row
+				height: 100%
+				@media screen and(max-width:1025px)
+					height: auto
+				@media screen and(max-width:768.9px)
+					height: 100%
+				.col
+					&:first-child
+						@media screen and(max-width:1025px)
+							margin-bottom: 0
+		.container-fluid
+			position: absolute
+			padding: 0
+			margin: 0
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			z-index: 0
+			min-height: 100%
+			@media (max-width: 1024.98px)
+				position: static
+				padding: 0 15px
+		.row
+			height: 100%
+			.col
+				height: 100%
+				padding: 0 !important
+				@media (max-width: 1024.98px)
+					margin-bottom: 0 !important
+					height: auto
+					padding: 0 15px !important
+		.fluid-caption-image,.image-map-wrapper
+			height: 100%
+			a
+				height: 100%
+				img
+					max-width: 100%
+					height: 100%
+					width: 100%
+		.caption-wrapper
+			padding: 80px 0
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+			justify-content: center
+			height: 100%
+			@media screen and(max-width:1025px)
+				padding: 40px 0
+				height: 100%
+		&:nth-child(odd)
+			.container
+				.row
+					.col
+						&:last-child
+							.caption-wrapper
+								margin-left: 8.3333%
+								@media (max-width: 1024.98px)
+									margin-left: 0
+			@media screen and ( max-width:1024px)
+				.container
+					order: 1
+				.container-fluid
+					order: 2
+		&:nth-child(even)
+			@media screen and ( max-width: 1024px)
+				.container
+					order: 2
+					.row
+						flex-direction: row-reverse
+				.container-fluid
+					order: 1
+					.row
+						flex-direction: row-reverse
+.over-flow-scollbar
+	padding-right: 15px
+	height: 500px
+	overflow-y: scroll
+	scrollbar-width: thin
+	scrollbar-color: $main #b2b2b2
+	&::-webkit-scrollbar
+		background: #b2b2b2
+		width: 5px
+	&::-webkit-scrollbar-track
+		-webkit-box-shadow: inset 0 0 6px #b2b2b2
+		background-color: #b2b2b2
+	&::-webkit-scrollbar-thumb
+		background-color: $main
+.home-lp-section
+	max-width: 1340px
+	margin: 0 auto
+	.container
+		@media (min-width: 1280px)
+			max-width: 1140px
+
+.btn-center
+	display: flex
+	justify-content: center
+	align-items: center
+.btn
+	display: flex 
+	justify-content: center
+	align-items: center 
+	border: 1px solid transparent
+	border-radius: 20px
+	transition: .3s all  ease-in-out
+	height: 40px
+	width: 140px
+	span
+		transition: .3s all  ease-in-out
+		font-size: .875rem
+		font-weight: 700
+		text-transform: uppercase
+		@media screen and ( max-width:  1024px)
+			font-size: .75rem
+			
+	&.btn-red
+		background: $main
+		span
+			color: #ffffff
+		&:hover
+			border-color: $main
+			background: #ffffff
+			span
+				color: $main
+	&.btn-black
+		background: transparent
+		border-color: #000000
+		span
+			color: #000000
+		&:hover
+			background: #000000
+			span
+				color: #ffffff
+.section-title 
+	.title
+		font-size: 2.25rem
+		color: #000000
+		text-transform: uppercase
+		font-weight: 300
+		position: relative
+		padding-bottom: 10px
+		margin-bottom: 20px
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			pointer-events: none
+			left: 0
+			bottom: 0
+			z-index: 9
+			height: 1px
+			width: 60px
+			background: #ed1a22
+			transition: .3s all ease-in-out
+		@media screen and ( max-width: 1024px)
+			font-size: 1.5rem
+			
+	&.text-center
+		.title
+			text-align: center
+			&::before
+				left: 50%
+				transform: translateX(-50%)
+.service-menu-bg
+	background: url('../img/bg/6.png')
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center

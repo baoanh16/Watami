@@ -1,0 +1,55 @@
+.home-contact
+	background: url('../img/bg/2.png')
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	padding: 60px 0
+	text-align: center
+	
+	.row
+		@media screen and ( min-width: 1024px )
+			padding: 0 8.33%
+		@media screen and ( min-width: 1280px )
+			padding: 0 16.63%
+	p 
+		font-size: 14px
+		color: #ffffff
+		font-weight: 300
+	.place
+		padding-bottom: 50px
+		position: relative
+		&:before
+			content: ''
+			display: block
+			position: absolute
+			pointer-events: none
+			left: 50%
+			transform: translateX(-50%)
+			bottom: 25px
+			z-index: 9
+			height: 5px
+			width: 20px
+			background: #ffffff
+		@media screen and ( max-width: 1024px)
+			padding-bottom: 30px
+			&:before
+				bottom: 15px
+			
+		span 
+			font-size: 14px
+			color: #ffffff
+			font-weight: 400
+			text-transform: uppercase
+	.address
+		padding-bottom: 50px
+		@media screen and ( max-width: 1024px)
+			padding-bottom: 30px
+		span 
+			font-size: 14px
+			color: #ffffff
+			font-weight: 900
+	.hotline
+		span 
+			font-size: 14px
+			color: #ffffff
+			font-weight: 400

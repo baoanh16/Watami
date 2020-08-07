@@ -3,6 +3,8 @@ $(document).ready(function () {
 	$('[data-bg]').each(function () {
 		$(this).addClass('data-bg')
 	})
+	swiperInit();
+	stickyLP();
 	var moveLanguage = new MappingListener({
 		selector: 'header .language-wrapper',
 		mobileWrapper: 'header .menu-toggle',
@@ -284,6 +286,56 @@ function playVideo() {
 }
 
 
+function swiperInit() {
+	var homerSwiper = new Swiper(".primary-banner .swiper-container", {
+		// Optional parameters
+		slidesPerView: 1,
+		speed: 1205,
+		autoplay: {
+			delay: 3000
+		},
+
+	});
+	var homerSwiper = new Swiper(".home-gallery .swiper-container", {
+		// Optional parameters
+		speed: 1205,
+		autoplay: {
+			delay: 3000
+		},
+		centeredSlides: true,
+		breakpointsInverse: true,
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 0,
+			},
+			576: {
+				slidesPerView: 1,
+			},
+			767: {
+				slidesPerView: 1,
+				spaceBetween: 0,
+			},
+			1024.1: {
+				slidesPerView: 1.8,
+				spaceBetween: 120,
+			}
+		},
+		runCallbacksOnInit: true,
+	    pagination: {
+	    	el: '#numberSlides',
+	    	type: 'fraction',
+	    },
+		navigation: {
+			nextEl: ".home-gallery .swiper-next",
+			prevEl: ".home-gallery .swiper-prev"
+		}
+
+	});
+
+
+}
+
 function watamiNavSticky(navOffsetTop) {
 	var scrollTop = null,
 		$watamiNav = $('.watami-nav');
@@ -317,4 +369,51 @@ function scrollToSection(sectionId) {
 	$('html, body').animate({
 		scrollTop: offsetTop
 	}, 500);
+
+}
+
+
+
+
+function stickyLP() {
+	if ($(".home-lp-link").length) {
+		$(".home-lp-link").scrollToFixed({
+			zIndex: 99,
+			marginTop: $("header").outerHeight(),
+		});
+	}
+
+
+
+	$(".sticky-navigation a").on("click", function (event) {
+		if (this.hash !== "") {
+			let offset =
+				$("header").outerHeight() + $(".product-detail-nav").outerHeight();
+			var hash = this.hash;
+			$("html, body").animate({
+					scrollTop: $(hash).offset().top - offset,
+				},
+				800,
+				function () {
+					window.location.hash = hash;
+				}
+			);
+		} // End if
+	});
+	$(".home-lp-link a").on("click", function (event) {
+		if (this.hash !== "") {
+			let offset =
+				$("header").outerHeight() + $(".home-lp-link").outerHeight();
+			var hash = this.hash;
+			$("html, body").animate({
+					scrollTop: $(hash).offset().top - offset,
+				},
+				800,
+				function () {
+					window.location.hash = hash;
+				}
+			);
+		} // End if
+	});
+
 }
