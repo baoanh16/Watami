@@ -19,9 +19,9 @@
 	</xsl:template>
 
 	<xsl:template match="News">
-		<a data-fancybox="home-menu">
+		<a >
 			<xsl:attribute name="href">
-				<xsl:value-of select="ThumbnailUrl"></xsl:value-of>
+				<xsl:value-of select="SubTitle"></xsl:value-of>
 			</xsl:attribute>
 			<xsl:attribute name="title">
 				<xsl:value-of select="Title"></xsl:value-of>
