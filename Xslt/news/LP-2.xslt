@@ -47,24 +47,8 @@
 							<div class="zone-description">
 								<xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
 							</div>
-							<div class="btn-left"><a class="btn btn-black">
-
-
-									<xsl:if test="BriefContent">
-
-
-
-										<xsl:attribute name="href">
-											<xsl:value-of select="Url"></xsl:value-of>
-										</xsl:attribute>
-										<xsl:attribute name="title">
-											<xsl:value-of select="Title"></xsl:value-of>
-										</xsl:attribute>
-									</xsl:if>
-
-									<span>About us</span>
-								</a>
-							</div>
+							<xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
+						
 						</div>
 					</div>
 					<div class="col col-12 col-lg-6"></div>

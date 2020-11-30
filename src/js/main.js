@@ -164,14 +164,53 @@ $(document).ready(function () {
 			}
 		},
 	}
+	var OurMenuSwiper = {
+		pagination: {
+			el: '.our-menu-swiper .swiper-container .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+		on: {
+			init: function () {
+				$('.our-menu-swiper .swiper-slide .imgbox').height($('.our-menu-swiper .swiper-slide').width() * 390 / 690)
+				$('.our-menu-swiper .swiper-prev').css({
+					"left": $('.our-menu-swiper .swiper-slide-active').offset().left - ($(window).outerWidth() / 2 - $('.our-menu-swiper .swiper-container').outerWidth() / 2) - 40,
+					"top": $('.our-menu-swiper .swiper-slide .imgbox').height() / 2
+				})
+				$('.our-menu-swiper .swiper-next').css({
+					"right": $('.our-menu-swiper .swiper-slide-active').offset().left - ($(window).outerWidth() / 2 - $('.our-menu-swiper .swiper-container').outerWidth() / 2) - 40,
+					"top": $('.our-menu-swiper .swiper-slide .imgbox').height() / 2
+				})
+			},
+
+			resize: function () {
+				$('.our-menu-swiper .swiper-slide .imgbox').height($('.our-menu-swiper .swiper-slide').width() * 390 / 690)
+				$('.our-menu-swiper .swiper-prev').css({
+					"left": $('.our-menu-swiper .swiper-slide-active').offset().left - ($(window).outerWidth() / 2 - $('.our-menu-swiper .swiper-container').outerWidth() / 2) - 40,
+					"top": $('.our-menu-swiper .swiper-slide .imgbox').height() / 2
+				})
+				$('.our-menu-swiper .swiper-next').css({
+					"right": $('.our-menu-swiper .swiper-slide-active').offset().left - ($(window).outerWidth() / 2 - $('.our-menu-swiper .swiper-container').outerWidth() / 2) - 40,
+					"top": $('.our-menu-swiper .swiper-slide .imgbox').height() / 2
+				})
+			}
+		},
+		navigation: {
+			prevEl: '.our-menu-swiper .swiper-nav .swiper-prev',
+			nextEl: '.our-menu-swiper .swiper-nav .swiper-next',
+		}
+	}
 	$.extend(Home3, HomeSliderOption)
 	$.extend(Home7, HomeSliderOption)
 	$.extend(Home8, HomeSliderOption)
+	$.extend(OurMenuSwiper, HomeSliderOption)
 	var Home3Slider = new Swiper('.restaurants .swiper-container', Home3)
 
 	var Home7Slider = new Swiper('.promotions .swiper-container', Home7)
 
 	var Home8Slider = new Swiper('.news-event .swiper-container', Home8)
+
+	var MenuSwiper = new Swiper('.our-menu-swiper .swiper-container', OurMenuSwiper)
 
 
 	var RestarauntSlider = new Swiper('.restaurant-2 .swiper-container', {
@@ -191,6 +230,9 @@ $(document).ready(function () {
 			clickable: true,
 		}
 	})
+
+
+	
 
 
 	$('.promotion-item').each(function () {
@@ -322,10 +364,10 @@ function swiperInit() {
 			}
 		},
 		runCallbacksOnInit: true,
-	    pagination: {
-	    	el: '#numberSlides',
-	    	type: 'fraction',
-	    },
+		pagination: {
+			el: '#numberSlides',
+			type: 'fraction',
+		},
 		navigation: {
 			nextEl: ".home-gallery .swiper-next",
 			prevEl: ".home-gallery .swiper-prev"

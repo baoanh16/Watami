@@ -8,32 +8,50 @@
 			<h2 class="main-title white">
 				<xsl:value-of disable-output-escaping="yes" select="/NewsList/ModuleTitle"></xsl:value-of>
 			</h2>
-			<div class="row">
-				<div class="col-lg-10 col-xl-8">
-					<div class="imgbox">
+			<div class="our-menu-swiper">
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
 						<xsl:apply-templates select="/NewsList/News"></xsl:apply-templates>
+
 					</div>
+					<xsl:if test="count(/NewsList/News) &gt; 1">
+						<div class="swiper-pagination"></div>
+					</xsl:if>
+					<xsl:if test="count(/NewsList/News) &gt;1">
+						<div class="swiper-nav">
+							<span class="swiper-prev lnr lnr-chevron-left"></span>
+							<span class="swiper-next lnr lnr-chevron-right"></span>
+						</div>
+					</xsl:if>
 				</div>
 			</div>
 		</div>
 	</xsl:template>
 
 	<xsl:template match="News">
-		<a >
-			<xsl:attribute name="href">
-				<xsl:value-of select="SubTitle"></xsl:value-of>
-			</xsl:attribute>
-			<xsl:attribute name="title">
-				<xsl:value-of select="Title"></xsl:value-of>
-			</xsl:attribute>
-			<img class="lazyload">
-			<xsl:attribute name="data-src">
-				<xsl:value-of select="ImageUrl"></xsl:value-of>
-			</xsl:attribute>
-			<xsl:attribute name="alt">
-				<xsl:value-of select="Title"></xsl:value-of>
-			</xsl:attribute>
-			</img>
-		</a>
+		<div class="swiper-slide">
+			<div class="imgbox">
+				<a>
+					<xsl:if test="SubTitle !=''">
+
+						<xsl:attribute name="href">
+							<xsl:value-of select="SubTitle"></xsl:value-of>
+						</xsl:attribute>
+					</xsl:if>
+
+					<xsl:attribute name="title">
+						<xsl:value-of select="Title"></xsl:value-of>
+					</xsl:attribute>
+					<img class="lazyload">
+					<xsl:attribute name="data-src">
+						<xsl:value-of select="ImageUrl"></xsl:value-of>
+					</xsl:attribute>
+					<xsl:attribute name="alt">
+						<xsl:value-of select="Title"></xsl:value-of>
+					</xsl:attribute>
+					</img>
+				</a>
+			</div>
+		</div>
 	</xsl:template>
 </xsl:stylesheet>

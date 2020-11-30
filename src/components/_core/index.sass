@@ -143,3 +143,52 @@ a
 			&:hover
 				background-color: #f01a22
 				color: #fff
+.our-menu-swiper
+	margin: 0 auto
+	@media screen and ( max-width: 1024px)
+		padding: 0 30px
+	@media screen and ( max-width: 576px)
+		padding: 0
+	.swiper-slide
+		.imgbox
+			overflow: hidden
+		.title
+			padding-top: 20px
+			h3
+				text-align: center
+				text-transform: uppercase
+				color: white
+				font-size: 24px
+				opacity: 0
+				transform: translateY(10px)
+				transition: all .3s cubic-bezier(.2,.5,.5,.8)
+				@media (max-width: 1024px)
+					font-size: 20px
+				@media (max-width: 575.9px)
+					font-size: 16px
+		&.swiper-slide-active
+			h3
+				opacity: 1
+				transform: translateY(0)
+	.swiper-prev,.swiper-next
+		font-size: 40px
+		position: absolute
+		color: white
+		z-index: 5
+		top: 50%
+		margin-bottom: 36px
+		transform: translateY(-50%)
+		width: 40px
+		display: flex
+		justify-content: center
+		align-items: center
+		cursor: pointer
+	@media (max-width: 1024.98px)
+		.swiper-prev,.swiper-next
+			background: rgba(255,255,255,.5)
+			font-size: 28px
+			height: 40px
+		.swiper-prev
+			left: 0!important
+		.swiper-next
+			right: 0!important

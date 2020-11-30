@@ -11,15 +11,16 @@
 			padding-bottom: 20px
 			font-size: 1rem
 	.btn-left
+		display: flex
+		.btn
+			&:not(:first-child)
+				margin-left: 15px
 		@media screen and ( max-width: 1024px)
 			padding-bottom: 30px
-			
-			
 	.content
 		padding-top: 100px
 		@media screen and ( max-width:  1024px)
 			padding-top: 0
-			
 	.image-wrapper
 		@media screen and ( min-width:  1024.1px) and ( max-width:  1200px)
 			display: block
